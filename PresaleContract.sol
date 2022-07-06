@@ -164,10 +164,10 @@ contract NovaSwap is Ownable, Whitelisted {
         uint256 outAmount = inAmount.mul(1000).div(swapRate);
     
 
-        require(isSwapStarted == true, 'ShibanovaSwap::Swap not started');
-        require(inAmount <= total, "ShibanovaSwap::Insufficient funds");
-        require(outAmount <= quota, "ShibanovaSwap::Quota not enough");
-        require(spent[msg.sender].add(inAmount) <= maxBuy, "ShibanovaSwap: :Reached Max Buy");
+        require(isSwapStarted == true, 'NebulanovaSwap::Swap not started');
+        require(inAmount <= total, "NebulanovaSwap::Insufficient funds");
+        require(outAmount <= quota, "NebulanovaSwap::Quota not enough");
+        require(spent[msg.sender].add(inAmount) <= maxBuy, "NebulanovaSwap: :Reached Max Buy");
 
         token0.transferFrom(msg.sender, address(Payee), inAmount);
         

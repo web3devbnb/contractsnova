@@ -2,7 +2,7 @@
 
 pragma solidity >=0.6.2;
 
-interface IShibaRouter01 {
+interface INebulaRouter01 {
     function factory() external pure returns (address);
     function WETH() external pure returns (address);
 

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity =0.5.16;
 
-import './interfaces/IShibaFactory.sol';
-import './ShibaPair.sol';
+import './interfaces/INebulaFactory.sol';
+import './NebulaPair.sol';
 
-contract ShibaFactory is IShibaFactory {
-    bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(ShibaPair).creationCode));
+contract NebulaFactory is INebulaFactory {
+    bytes32 public constant INIT_CODE_PAIR_HASH = keccak256(abi.encodePacked(type(NebulaPair).creationCode));
 
     address public feeTo;
     address public feeToSetter;
@@ -33,16 +33,16 @@ contract ShibaFactory is IShibaFactory {
     }
 
     function createPair(address tokenA, address tokenB) external returns (address pair) {
-        require(tokenA != tokenB, 'ShibaSwap: IDENTICAL_ADDRESSES');
+        require(tokenA != tokenB, 'NebulaSwap: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
-        require(token0 != address(0), 'ShibaSwap: ZERO_ADDRESS');
-        require(getPair[token0][token1] == address(0), 'ShibaSwap: PAIR_EXISTS'); // single check is sufficient
-        bytes memory bytecode = type(ShibaPair).creationCode;
+        require(token0 != address(0), 'NebulaSwap: ZERO_ADDRESS');
+        require(getPair[token0][token1] == address(0), 'NebulaSwap: PAIR_EXISTS'); // single check is sufficient
+        bytes memory bytecode = type(NebulaPair).creationCode;
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
         assembly {
             pair := create2(0, add(bytecode, 32), mload(bytecode), salt)
         }
-        IShibaPair(pair).initialize(token0, token1);
+        INebulaPair(pair).initialize(token0, token1);
         getPair[token0][token1] = pair;
         getPair[token1][token0] = pair; // populate mapping in the reverse direction
         allPairs.push(pair);
@@ -50,12 +50,12 @@ contract ShibaFactory is IShibaFactory {
     }
 
     function setFeeTo(address _feeTo) external {
-        require(msg.sender == feeToSetter, 'ShibaSwap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'NebulaSwap: FORBIDDEN');
         feeTo = _feeTo;
     }
 
     function setFeeToSetter(address _feeToSetter) external {
-        require(msg.sender == feeToSetter, 'ShibaSwap: FORBIDDEN');
+        require(msg.sender == feeToSetter, 'NebulaSwap: FORBIDDEN');
         feeToSetter = _feeToSetter;
     }
 

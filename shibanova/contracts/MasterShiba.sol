@@ -6,14 +6,14 @@ import "./libs/IBEP20.sol";
 import "./libs/SafeBEP20.sol";
 import "./libs/Ownable.sol";
 import "./libs/ReentrancyGuard.sol";
-import "./ShibaBonusAggregator.sol";
-import "./libs/ShibaBEP20.sol";
+import "./NebulaBonusAggregator.sol";
+import "./libs/NebulaBEP20.sol";
 
-// MasterShiba is the master of Nova and sNova.
+// MasterNebula is the master of Nova and sNova.
 // The Ownership of this contract is going to be transferred to a timelock
-contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
+contract MasterNebula is Ownable, IMasterBonus, ReentrancyGuard {
     using SafeMath for uint256;
-    using SafeBEP20 for ShibaBEP20;
+    using SafeBEP20 for NebulaBEP20;
     using SafeBEP20 for IBEP20;
 
     // Info of each user.
@@ -45,11 +45,11 @@ contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
         bool isSNovaRewards;
     }
 
-    ShibaBonusAggregator public bonusAggregator;
+    NebulaBonusAggregator public bonusAggregator;
     // The Nova TOKEN!
-    ShibaBEP20 public Nova;
+    NebulaBEP20 public Nova;
     // The SNova TOKEN!
-    ShibaBEP20 public sNova;
+    NebulaBEP20 public sNova;
     // Dev address.
     address public devaddr;
     // Nova tokens created per block.
@@ -83,9 +83,9 @@ contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
     event EmissionRateUpdated(address indexed caller, uint256 previousAmount, uint256 newAmount);
 
     constructor(
-        ShibaBEP20 _Nova,
-        ShibaBEP20 _sNova,
-        ShibaBonusAggregator _bonusAggregator,
+        NebulaBEP20 _Nova,
+        NebulaBEP20 _sNova,
+        NebulaBonusAggregator _bonusAggregator,
         address _devaddr,
         address _feeAddress,
         uint256 _NovaPerBlock,
@@ -251,7 +251,7 @@ contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
         pool.lastRewardBlock = block.number;
     }
 
-    // Allow ShibaBonusAggregator to add bonus on a single pool by id to a specific user
+    // Allow NebulaBonusAggregator to add bonus on a single pool by id to a specific user
     function updateUserBonus(address _user, uint256 _pid, uint256 bonus) external virtual override validatePool(_pid) onlyAggregator{
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
@@ -273,7 +273,7 @@ contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
         user.rewardDebt = user.amountWithBonus.mul(pool.accNovaPerShare).div(1e12);
     }
 
-    // Deposit LP tokens to MasterShiba for Nova allocation.
+    // Deposit LP tokens to MasterNebula for Nova allocation.
     function deposit(uint256 _pid, uint256 _amount) external validatePool(_pid) nonReentrant {
         address _user = msg.sender;
         PoolInfo storage pool = poolInfo[_pid];
@@ -314,7 +314,7 @@ contract MasterShiba is Ownable, IMasterBonus, ReentrancyGuard {
         emit Deposit(_user, _pid, _amount);
     }
 
-    // Withdraw LP tokens from MasterShiba.
+    // Withdraw LP tokens from MasterNebula.
     function withdraw(uint256 _pid, uint256 _amount) external validatePool(_pid) nonReentrant {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];

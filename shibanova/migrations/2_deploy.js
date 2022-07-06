@@ -2,9 +2,9 @@ const NovaToken = artifacts.require('NovaToken')
 const SNovaToken = artifacts.require('SNovaToken')
 const FeeManager = artifacts.require('FeeManager')
 const FeeManagerDecentralized = artifacts.require('DecentralizedFeeManager')
-const ShibaBonusAggregator = artifacts.require('ShibaBonusAggregator')
-const ShibaMoneyPot = artifacts.require('ShibaMoneyPot')
-const MasterShiba = artifacts.require('MasterShiba')
+const NebulaBonusAggregator = artifacts.require('NebulaBonusAggregator')
+const NebulaMoneyPot = artifacts.require('NebulaMoneyPot')
+const MasterNebula = artifacts.require('MasterNebula')
 
 const swapPenaltyMaxPeriod = 84600;
 const swapPenaltyMaxPerSNova = 30;
@@ -26,14 +26,14 @@ module.exports = async function(deployer, network, accounts) {
     // await deployer.deploy(SNovaToken, swapPenaltyMaxPeriod, swapPenaltyMaxPerSNova)
     // const _sNova = await SNovaToken.deployed()
 
-    // await deployer.deploy(ShibaBonusAggregator)
-    // const _bonusAggregator = await ShibaBonusAggregator.deployed()
+    // await deployer.deploy(NebulaBonusAggregator)
+    // const _bonusAggregator = await NebulaBonusAggregator.deployed()
 
     await deployer.deploy(FeeManagerDecentralized, _teamAddr, _moneyPotShare, _snova)
     // const _feeAddress = await FeeManager.deployed()
     // const _feeManager = await FeeManager.deployed()
 
-    // await deployer.deploy(MasterShiba, 
+    // await deployer.deploy(MasterNebula, 
     //     _Nova.address,
     //     _sNova.address,
     //     _bonusAggregator.address,
@@ -42,12 +42,12 @@ module.exports = async function(deployer, network, accounts) {
     //     _NovaPerBlock,
     //     _startBlock
     //     )
-    // const _masterShiba = await MasterShiba.deployed()
+    // const _masterNebula = await MasterNebula.deployed()
 
-    // await deployer.deploy(ShibaMoneyPot, 
+    // await deployer.deploy(NebulaMoneyPot, 
     //     _sNova.address, 
     //     _feeManager.address, 
-    //     _masterShiba.address, 
+    //     _masterNebula.address, 
     //     _startBlock, 
     //     _initialUpdateMoneyPotPeriodNbBlocks
     //     )

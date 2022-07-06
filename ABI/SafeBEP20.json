@@ -1,16 +1,16 @@
 {
   "contractName": "SafeBEP20",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers around BEP20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeBEP20 for IBEP20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"SafeBEP20\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/shibanova/contracts/libs/SafeBEP20.sol\":\"SafeBEP20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/shibanova/contracts/libs/Address.sol\":{\"keccak256\":\"0x7ffea9d334117285ef78893e33b26d97c82404c3d804e692bb517da2624b2480\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c1e8d4f0f7a6ba11315ba3728eb4bb996ac47f2c9863ad4f0f7df5bed771a5f\",\"dweb:/ipfs/QmXdhUzombSb7e8EMj5pWYQNKYqhnQGa33THJ9PyctkjM7\"]},\"/D/DeployShiba/shibanova/contracts/libs/IBEP20.sol\":{\"keccak256\":\"0x06827c4a144efe4b7f4eebe7cc9b3cec72ab103f0b3bc8ed2b17b7eacb8b8305\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://2d0a9616491ec4dd28a23491a156731d9c719edc3d78022e534c7ecd9bf51b6e\",\"dweb:/ipfs/QmTimAYxJtMyQkYWM41V85YvSuGXNiNiQCnqauN5gRxG9W\"]},\"/D/DeployShiba/shibanova/contracts/libs/SafeBEP20.sol\":{\"keccak256\":\"0xf859301d5797bdc583e3d6cfe5ff70ae7cb35f747da20b435dde06c9732e744b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9bc523204600df41f090eaffbca5ebcd530bc06a9a8602d0c01c74a444afe35\",\"dweb:/ipfs/QmbrCib7GDkbF43w4q8Gx2dgQGSJVHTfugUqn6enEcmXen\"]},\"/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers around BEP20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeBEP20 for IBEP20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"SafeBEP20\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/Nebulanova/contracts/libs/SafeBEP20.sol\":\"SafeBEP20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/Nebulanova/contracts/libs/Address.sol\":{\"keccak256\":\"0x7ffea9d334117285ef78893e33b26d97c82404c3d804e692bb517da2624b2480\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c1e8d4f0f7a6ba11315ba3728eb4bb996ac47f2c9863ad4f0f7df5bed771a5f\",\"dweb:/ipfs/QmXdhUzombSb7e8EMj5pWYQNKYqhnQGa33THJ9PyctkjM7\"]},\"/D/DeployNebula/Nebulanova/contracts/libs/IBEP20.sol\":{\"keccak256\":\"0x06827c4a144efe4b7f4eebe7cc9b3cec72ab103f0b3bc8ed2b17b7eacb8b8305\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://2d0a9616491ec4dd28a23491a156731d9c719edc3d78022e534c7ecd9bf51b6e\",\"dweb:/ipfs/QmTimAYxJtMyQkYWM41V85YvSuGXNiNiQCnqauN5gRxG9W\"]},\"/D/DeployNebula/Nebulanova/contracts/libs/SafeBEP20.sol\":{\"keccak256\":\"0xf859301d5797bdc583e3d6cfe5ff70ae7cb35f747da20b435dde06c9732e744b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e9bc523204600df41f090eaffbca5ebcd530bc06a9a8602d0c01c74a444afe35\",\"dweb:/ipfs/QmbrCib7GDkbF43w4q8Gx2dgQGSJVHTfugUqn6enEcmXen\"]},\"/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]}},\"version\":1}",
   "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208cf9e76f1673946d0d24c6f9197a2065d8b824a768c071e7183fa2e56134487164736f6c634300060c0033",
   "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208cf9e76f1673946d0d24c6f9197a2065d8b824a768c071e7183fa2e56134487164736f6c634300060c0033",
   "immutableReferences": {},
   "sourceMap": "606:3404:14:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "606:3404:14:-:0;;;;;;;;",
   "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.6.0;\r\n\r\nimport './IBEP20.sol';\r\nimport './SafeMath.sol';\r\nimport './Address.sol';\r\n\r\n/**\r\n * @title SafeBEP20\r\n * @dev Wrappers around BEP20 operations that throw on failure (when the token\r\n * contract returns false). Tokens that return no value (and instead revert or\r\n * throw on failure) are also supported, non-reverting calls are assumed to be\r\n * successful.\r\n * To use this library you can add a `using SafeBEP20 for IBEP20;` statement to your contract,\r\n * which allows you to call the safe operations as `token.safeTransfer(...)`, etc.\r\n */\r\nlibrary SafeBEP20 {\r\n    using SafeMath for uint256;\r\n    using Address for address;\r\n\r\n    function safeTransfer(\r\n        IBEP20 token,\r\n        address to,\r\n        uint256 value\r\n    ) internal {\r\n        _callOptionalReturn(token, abi.encodeWithSelector(token.transfer.selector, to, value));\r\n    }\r\n\r\n    function safeTransferFrom(\r\n        IBEP20 token,\r\n        address from,\r\n        address to,\r\n        uint256 value\r\n    ) internal {\r\n        _callOptionalReturn(token, abi.encodeWithSelector(token.transferFrom.selector, from, to, value));\r\n    }\r\n\r\n    /**\r\n     * @dev Deprecated. This function has issues similar to the ones found in\r\n     * {IBEP20-approve}, and its usage is discouraged.\r\n     *\r\n     * Whenever possible, use {safeIncreaseAllowance} and\r\n     * {safeDecreaseAllowance} instead.\r\n     */\r\n    function safeApprove(\r\n        IBEP20 token,\r\n        address spender,\r\n        uint256 value\r\n    ) internal {\r\n        // safeApprove should only be called when setting an initial allowance,\r\n        // or when resetting it to zero. To increase and decrease it, use\r\n        // 'safeIncreaseAllowance' and 'safeDecreaseAllowance'\r\n        // solhint-disable-next-line max-line-length\r\n        require(\r\n            (value == 0) || (token.allowance(address(this), spender) == 0),\r\n            'SafeBEP20: approve from non-zero to non-zero allowance'\r\n        );\r\n        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, value));\r\n    }\r\n\r\n    function safeIncreaseAllowance(\r\n        IBEP20 token,\r\n        address spender,\r\n        uint256 value\r\n    ) internal {\r\n        uint256 newAllowance = token.allowance(address(this), spender).add(value);\r\n        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));\r\n    }\r\n\r\n    function safeDecreaseAllowance(\r\n        IBEP20 token,\r\n        address spender,\r\n        uint256 value\r\n    ) internal {\r\n        uint256 newAllowance = token.allowance(address(this), spender).sub(\r\n            value,\r\n            'SafeBEP20: decreased allowance below zero'\r\n        );\r\n        _callOptionalReturn(token, abi.encodeWithSelector(token.approve.selector, spender, newAllowance));\r\n    }\r\n\r\n    /**\r\n     * @dev Imitates a Solidity high-level call (i.e. a regular function call to a contract), relaxing the requirement\r\n     * on the return value: the return value is optional (but if data is returned, it must not be false).\r\n     * @param token The token targeted by the call.\r\n     * @param data The call data (encoded using abi.encode or one of its variants).\r\n     */\r\n    function _callOptionalReturn(IBEP20 token, bytes memory data) private {\r\n        // We need to perform a low level call here, to bypass Solidity's return data size checking mechanism, since\r\n        // we're implementing it ourselves. We use {Address.functionCall} to perform this call, which verifies that\r\n        // the target address contains contract code and also asserts for success in the low-level call.\r\n\r\n        bytes memory returndata = address(token).functionCall(data, 'SafeBEP20: low-level call failed');\r\n        if (returndata.length > 0) {\r\n            // Return data is optional\r\n            // solhint-disable-next-line max-line-length\r\n            require(abi.decode(returndata, (bool)), 'SafeBEP20: BEP20 operation did not succeed');\r\n        }\r\n    }\r\n}",
-  "sourcePath": "D:/DeployShiba/shibanova/contracts/libs/SafeBEP20.sol",
+  "sourcePath": "D:/DeployNebula/Nebulanova/contracts/libs/SafeBEP20.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeBEP20.sol",
+    "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeBEP20.sol",
     "exportedSymbols": {
       "SafeBEP20": [
         1705
@@ -32,7 +32,7 @@
         "src": "35:23:14"
       },
       {
-        "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/IBEP20.sol",
+        "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/IBEP20.sol",
         "file": "./IBEP20.sol",
         "id": 1495,
         "nodeType": "ImportDirective",
@@ -43,7 +43,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol",
+        "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 1496,
         "nodeType": "ImportDirective",
@@ -54,7 +54,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/Address.sol",
+        "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/Address.sol",
         "file": "./Address.sol",
         "id": 1497,
         "nodeType": "ImportDirective",
@@ -3096,7 +3096,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeBEP20.sol",
+      "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeBEP20.sol",
       "exportedSymbols": {
         "SafeBEP20": [
           1705
@@ -3121,7 +3121,7 @@
       {
         "attributes": {
           "SourceUnit": 1373,
-          "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/IBEP20.sol",
+          "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/IBEP20.sol",
           "file": "./IBEP20.sol",
           "scope": 1706,
           "symbolAliases": [
@@ -3136,7 +3136,7 @@
       {
         "attributes": {
           "SourceUnit": 1975,
-          "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol",
+          "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol",
           "file": "./SafeMath.sol",
           "scope": 1706,
           "symbolAliases": [
@@ -3151,7 +3151,7 @@
       {
         "attributes": {
           "SourceUnit": 1245,
-          "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/Address.sol",
+          "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/Address.sol",
           "file": "./Address.sol",
           "scope": 1706,
           "symbolAliases": [

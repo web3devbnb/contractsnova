@@ -3,11 +3,11 @@
 pragma solidity 0.6.12;
 
 import "./libs/SafeMath.sol";
-import "./libs/ShibaBEP20.sol";
+import "./libs/NebulaBEP20.sol";
 import "./interfaces/IMoneyPot.sol";
 
 // SNovaToken with Governance.
-contract SNovaToken is ShibaBEP20("ShibaNova share token sNova", "sNova") {
+contract SNovaToken is NebulaBEP20("NebulaNova share token sNova", "sNova") {
     using SafeMath for uint256;
 
     struct HolderInfo {
@@ -16,7 +16,7 @@ contract SNovaToken is ShibaBEP20("ShibaNova share token sNova", "sNova") {
 
 
     IMoneyPot public moneyPot;
-    ShibaBEP20 public Nova;
+    NebulaBEP20 public Nova;
     bool private _isNovaSetup = false;
     bool private _isMoneyPotSetup = false;
 
@@ -30,7 +30,7 @@ contract SNovaToken is ShibaBEP20("ShibaNova share token sNova", "sNova") {
         SWAP_PENALTY_MAX_PER_SNova = swapPenaltyMaxPerSNova.mul(1e10); // default: 30, 30% => 1 sNova = 0.3 Nova
     }
 
-    function setupNova(ShibaBEP20 _Nova) external onlyOwner {
+    function setupNova(NebulaBEP20 _Nova) external onlyOwner {
         require(!_isNovaSetup);
         Nova = _Nova;
         _isNovaSetup = true;

@@ -26,16 +26,16 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_pid\",\"type\":\"uint256\"}],\"name\":\"getBonusOnFarmsForUser\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IBonusAggregator.sol\":\"IBonusAggregator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IBonusAggregator.sol\":{\"keccak256\":\"0x70ee1760785d1f7800606abcd528fa209d7ffd3d681bd2416bc2bde3ce363791\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a1c530bf082ce5a083820b4972bf1a84cd5be856f50032e08f4fafb1a916ba8c\",\"dweb:/ipfs/QmTBATpeNszc3hp1qf9hT7xkFfnMExXTpd6RYgbHdtETJm\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_pid\",\"type\":\"uint256\"}],\"name\":\"getBonusOnFarmsForUser\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/IBonusAggregator.sol\":\"IBonusAggregator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/IBonusAggregator.sol\":{\"keccak256\":\"0x70ee1760785d1f7800606abcd528fa209d7ffd3d681bd2416bc2bde3ce363791\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a1c530bf082ce5a083820b4972bf1a84cd5be856f50032e08f4fafb1a916ba8c\",\"dweb:/ipfs/QmTBATpeNszc3hp1qf9hT7xkFfnMExXTpd6RYgbHdtETJm\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.6.12;\r\n\r\ninterface IBonusAggregator {\r\n    function getBonusOnFarmsForUser(address _user, uint256 _pid) external view returns (uint256);\r\n}\r\n",
-  "sourcePath": "D:\\DeployShiba\\shibanova\\contracts\\interfaces\\IBonusAggregator.sol",
+  "sourcePath": "D:\\DeployNebula\\Nebulanova\\contracts\\interfaces\\IBonusAggregator.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IBonusAggregator.sol",
+    "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/IBonusAggregator.sol",
     "exportedSymbols": {
       "IBonusAggregator": [
         184
@@ -194,7 +194,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IBonusAggregator.sol",
+      "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/IBonusAggregator.sol",
       "exportedSymbols": {
         "IBonusAggregator": [
           184

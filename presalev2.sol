@@ -374,12 +374,12 @@ interface Factory {
     function createPair(address tokenA, address tokenB) external returns (address pair);
 }
 
-// Presale contract is setup by the ShibaNova team, thereby being the 'owner' of the contract. ShibaNova collects 1% of the BNB raised and project tokens deposited as a fee.
+// Presale contract is setup by the NebulaNova team, thereby being the 'owner' of the contract. NebulaNova collects 1% of the BNB raised and project tokens deposited as a fee.
 // The 'payee' is the wallet belonging to the project owner requesting the presale. They are responsible for depositing the project token.
 // The presale is setup with a start block and end block to determine the duration of the presale.
 // The first stage of the presale is for whitelisted Nova/sNova holders to be able to buy first, usually 30 minutes. 
-// Once the presale has finished (either through selling out or time ending), ShibaNova will send the 'addLiquidity' function,
-// which creates and locks the LP, sends the fee to ShibaNova, allows purchasers to claim their tokens and allows project wallet to collect bnb.
+// Once the presale has finished (either through selling out or time ending), NebulaNova will send the 'addLiquidity' function,
+// which creates and locks the LP, sends the fee to NebulaNova, allows purchasers to claim their tokens and allows project wallet to collect bnb.
 
 
 // review start and end time change functions for needed restrictions. change startblock to 'starttime' to avoid confusion

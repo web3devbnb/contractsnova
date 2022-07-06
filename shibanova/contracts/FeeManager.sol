@@ -7,8 +7,8 @@ import "./libs/SafeMath.sol";
 import "./libs/IBEP20.sol";
 import "./libs/SafeBEP20.sol";
 import "./interfaces/IMoneyPot.sol";
-import "./interfaces/IShibaRouter02.sol";
-import "./interfaces/IShibaPair.sol";
+import "./interfaces/INebulaRouter02.sol";
+import "./interfaces/INebulaPair.sol";
 
 /*
 The FeeManager is a kind of contract-wallet that allow the owner to unbind (LP) and swap tokens
@@ -22,7 +22,7 @@ contract FeeManager is Ownable{
     uint256 public teamShare;
 
     IMoneyPot public moneyPot;
-    IShibaRouter02 public router;
+    INebulaRouter02 public router;
     IBEP20 public Nova;
 
     address public teamAddr; // Used for dev/marketing and others funds for project
@@ -38,7 +38,7 @@ contract FeeManager is Ownable{
     }
 
     function removeLiquidityToToken(address _token) external onlyOwner{
-        IShibaPair _pair = IShibaPair(_token);
+        INebulaPair _pair = INebulaPair(_token);
         uint256 _amount = _pair.balanceOf(address(this));
         address token0 = _pair.token0();
         address token1 = _pair.token1();
@@ -78,7 +78,7 @@ contract FeeManager is Ownable{
     }
 
     function setupRouter(address _router) external onlyOwner{
-        router = IShibaRouter02(_router);
+        router = INebulaRouter02(_router);
     }
 
     function setupMoneyPot(IMoneyPot _moneyPot) external onlyOwner{

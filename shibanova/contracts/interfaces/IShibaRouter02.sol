@@ -2,9 +2,9 @@
 
 pragma solidity >=0.6.2;
 
-import './IShibaRouter01.sol';
+import './INebulaRouter01.sol';
 
-interface IShibaRouter02 is IShibaRouter01 {
+interface INebulaRouter02 is INebulaRouter01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,

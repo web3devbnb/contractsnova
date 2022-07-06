@@ -1,18 +1,18 @@
 {
-  "contractName": "ShibaLibrary",
+  "contractName": "NebulaLibrary",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/shibanova/contracts/libs/ShibaLibrary.sol\":\"ShibaLibrary\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IShibaPair.sol\":{\"keccak256\":\"0x1bb7f847402960311acc064abe2e7e2ad3a3ac76ef94ec2f7ecaac3348295765\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0eb058cf31e811e100fc92bf47c5a500956b139cb9f154825ebb93e10531ef86\",\"dweb:/ipfs/Qmbg45TMH7ZvKJDbvEE2Uhx84hmB64oUL2WCBfzzbuJBn7\"]},\"/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]},\"/D/DeployShiba/shibanova/contracts/libs/ShibaLibrary.sol\":{\"keccak256\":\"0x18110d05ac2989f222f31fc6245a03cb424bcd2e394262ef96f03e18ff7a7009\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c5e143d56ba75e8d28cacc07aff59fbbdf9776add6179f72fa19ee8cff75b879\",\"dweb:/ipfs/QmRtLkuA4ud8h971NEeUxSnGargQHrk3rCvPU89hJTxmuF\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/Nebulanova/contracts/libs/NebulaLibrary.sol\":\"NebulaLibrary\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaPair.sol\":{\"keccak256\":\"0x1bb7f847402960311acc064abe2e7e2ad3a3ac76ef94ec2f7ecaac3348295765\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0eb058cf31e811e100fc92bf47c5a500956b139cb9f154825ebb93e10531ef86\",\"dweb:/ipfs/Qmbg45TMH7ZvKJDbvEE2Uhx84hmB64oUL2WCBfzzbuJBn7\"]},\"/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]},\"/D/DeployNebula/Nebulanova/contracts/libs/NebulaLibrary.sol\":{\"keccak256\":\"0x18110d05ac2989f222f31fc6245a03cb424bcd2e394262ef96f03e18ff7a7009\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c5e143d56ba75e8d28cacc07aff59fbbdf9776add6179f72fa19ee8cff75b879\",\"dweb:/ipfs/QmRtLkuA4ud8h971NEeUxSnGargQHrk3rCvPU89hJTxmuF\"]}},\"version\":1}",
   "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220920cdfb9e868555902a75be80bd8859686dd0ce416993d24eb505243a750a69b64736f6c634300060c0033",
   "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220920cdfb9e868555902a75be80bd8859686dd0ce416993d24eb505243a750a69b64736f6c634300060c0033",
   "immutableReferences": {},
   "sourceMap": "129:4407:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "129:4407:17:-:0;;;;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0;\r\n\r\nimport '../interfaces/IShibaPair.sol';\r\nimport \"./SafeMath.sol\";\r\n\r\nlibrary ShibaLibrary {\r\n    using SafeMath for uint;\r\n\r\n    // returns sorted token addresses, used to handle return values from pairs sorted in this order\r\n    function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {\r\n        require(tokenA != tokenB, 'ShibaLibrary: IDENTICAL_ADDRESSES');\r\n        (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);\r\n        require(token0 != address(0), 'ShibaLibrary: ZERO_ADDRESS');\r\n    }\r\n\r\n    // calculates the CREATE2 address for a pair without making any external calls\r\n    function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {\r\n        (address token0, address token1) = sortTokens(tokenA, tokenB);\r\n        pair = address(uint(keccak256(abi.encodePacked(\r\n                hex'ff',\r\n                factory,\r\n                keccak256(abi.encodePacked(token0, token1)),\r\n                hex'c7bd2786b4f02372e9f672ef8756c1b2ff83055f0bd71e65f5cb766b952aed32' // init code hash\r\n            ))));\r\n    }\r\n\r\n    // fetches and sorts the reserves for a pair\r\n    function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {\r\n        (address token0,) = sortTokens(tokenA, tokenB);\r\n        pairFor(factory, tokenA, tokenB);\r\n        (uint reserve0, uint reserve1,) = IShibaPair(pairFor(factory, tokenA, tokenB)).getReserves();\r\n        (reserveA, reserveB) = tokenA == token0 ? (reserve0, reserve1) : (reserve1, reserve0);\r\n    }\r\n\r\n    // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset\r\n    function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {\r\n        require(amountA > 0, 'ShibaLibrary: INSUFFICIENT_AMOUNT');\r\n        require(reserveA > 0 && reserveB > 0, 'ShibaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        amountB = amountA.mul(reserveB) / reserveA;\r\n    }\r\n\r\n    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset\r\n    function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {\r\n        require(amountIn > 0, 'ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT');\r\n        require(reserveIn > 0 && reserveOut > 0, 'ShibaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        uint amountInWithFee = amountIn.mul(9984);\r\n        uint numerator = amountInWithFee.mul(reserveOut);\r\n        uint denominator = reserveIn.mul(10000).add(amountInWithFee);\r\n        amountOut = numerator / denominator;\r\n    }\r\n\r\n    // given an output amount of an asset and pair reserves, returns a required input amount of the other asset\r\n    function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {\r\n        require(amountOut > 0, 'ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT');\r\n        require(reserveIn > 0 && reserveOut > 0, 'ShibaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        uint numerator = reserveIn.mul(amountOut).mul(10000);\r\n        uint denominator = reserveOut.sub(amountOut).mul(9984);\r\n        amountIn = (numerator / denominator).add(1);\r\n    }\r\n\r\n    // performs chained getAmountOut calculations on any number of pairs\r\n    function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {\r\n        require(path.length >= 2, 'ShibaLibrary: INVALID_PATH');\r\n        amounts = new uint[](path.length);\r\n        amounts[0] = amountIn;\r\n        for (uint i; i < path.length - 1; i++) {\r\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i], path[i + 1]);\r\n            amounts[i + 1] = getAmountOut(amounts[i], reserveIn, reserveOut);\r\n        }\r\n    }\r\n\r\n    // performs chained getAmountIn calculations on any number of pairs\r\n    function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {\r\n        require(path.length >= 2, 'ShibaLibrary: INVALID_PATH');\r\n        amounts = new uint[](path.length);\r\n        amounts[amounts.length - 1] = amountOut;\r\n        for (uint i = path.length - 1; i > 0; i--) {\r\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i - 1], path[i]);\r\n            amounts[i - 1] = getAmountIn(amounts[i], reserveIn, reserveOut);\r\n        }\r\n    }\r\n}\r\n",
-  "sourcePath": "D:/DeployShiba/shibanova/contracts/libs/ShibaLibrary.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0;\r\n\r\nimport '../interfaces/INebulaPair.sol';\r\nimport \"./SafeMath.sol\";\r\n\r\nlibrary NebulaLibrary {\r\n    using SafeMath for uint;\r\n\r\n    // returns sorted token addresses, used to handle return values from pairs sorted in this order\r\n    function sortTokens(address tokenA, address tokenB) internal pure returns (address token0, address token1) {\r\n        require(tokenA != tokenB, 'NebulaLibrary: IDENTICAL_ADDRESSES');\r\n        (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);\r\n        require(token0 != address(0), 'NebulaLibrary: ZERO_ADDRESS');\r\n    }\r\n\r\n    // calculates the CREATE2 address for a pair without making any external calls\r\n    function pairFor(address factory, address tokenA, address tokenB) internal pure returns (address pair) {\r\n        (address token0, address token1) = sortTokens(tokenA, tokenB);\r\n        pair = address(uint(keccak256(abi.encodePacked(\r\n                hex'ff',\r\n                factory,\r\n                keccak256(abi.encodePacked(token0, token1)),\r\n                hex'c7bd2786b4f02372e9f672ef8756c1b2ff83055f0bd71e65f5cb766b952aed32' // init code hash\r\n            ))));\r\n    }\r\n\r\n    // fetches and sorts the reserves for a pair\r\n    function getReserves(address factory, address tokenA, address tokenB) internal view returns (uint reserveA, uint reserveB) {\r\n        (address token0,) = sortTokens(tokenA, tokenB);\r\n        pairFor(factory, tokenA, tokenB);\r\n        (uint reserve0, uint reserve1,) = INebulaPair(pairFor(factory, tokenA, tokenB)).getReserves();\r\n        (reserveA, reserveB) = tokenA == token0 ? (reserve0, reserve1) : (reserve1, reserve0);\r\n    }\r\n\r\n    // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset\r\n    function quote(uint amountA, uint reserveA, uint reserveB) internal pure returns (uint amountB) {\r\n        require(amountA > 0, 'NebulaLibrary: INSUFFICIENT_AMOUNT');\r\n        require(reserveA > 0 && reserveB > 0, 'NebulaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        amountB = amountA.mul(reserveB) / reserveA;\r\n    }\r\n\r\n    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset\r\n    function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {\r\n        require(amountIn > 0, 'NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT');\r\n        require(reserveIn > 0 && reserveOut > 0, 'NebulaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        uint amountInWithFee = amountIn.mul(9984);\r\n        uint numerator = amountInWithFee.mul(reserveOut);\r\n        uint denominator = reserveIn.mul(10000).add(amountInWithFee);\r\n        amountOut = numerator / denominator;\r\n    }\r\n\r\n    // given an output amount of an asset and pair reserves, returns a required input amount of the other asset\r\n    function getAmountIn(uint amountOut, uint reserveIn, uint reserveOut) internal pure returns (uint amountIn) {\r\n        require(amountOut > 0, 'NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT');\r\n        require(reserveIn > 0 && reserveOut > 0, 'NebulaLibrary: INSUFFICIENT_LIQUIDITY');\r\n        uint numerator = reserveIn.mul(amountOut).mul(10000);\r\n        uint denominator = reserveOut.sub(amountOut).mul(9984);\r\n        amountIn = (numerator / denominator).add(1);\r\n    }\r\n\r\n    // performs chained getAmountOut calculations on any number of pairs\r\n    function getAmountsOut(address factory, uint amountIn, address[] memory path) internal view returns (uint[] memory amounts) {\r\n        require(path.length >= 2, 'NebulaLibrary: INVALID_PATH');\r\n        amounts = new uint[](path.length);\r\n        amounts[0] = amountIn;\r\n        for (uint i; i < path.length - 1; i++) {\r\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i], path[i + 1]);\r\n            amounts[i + 1] = getAmountOut(amounts[i], reserveIn, reserveOut);\r\n        }\r\n    }\r\n\r\n    // performs chained getAmountIn calculations on any number of pairs\r\n    function getAmountsIn(address factory, uint amountOut, address[] memory path) internal view returns (uint[] memory amounts) {\r\n        require(path.length >= 2, 'NebulaLibrary: INVALID_PATH');\r\n        amounts = new uint[](path.length);\r\n        amounts[amounts.length - 1] = amountOut;\r\n        for (uint i = path.length - 1; i > 0; i--) {\r\n            (uint reserveIn, uint reserveOut) = getReserves(factory, path[i - 1], path[i]);\r\n            amounts[i - 1] = getAmountIn(amounts[i], reserveIn, reserveOut);\r\n        }\r\n    }\r\n}\r\n",
+  "sourcePath": "D:/DeployNebula/Nebulanova/contracts/libs/NebulaLibrary.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/ShibaLibrary.sol",
+    "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/NebulaLibrary.sol",
     "exportedSymbols": {
-      "ShibaLibrary": [
+      "NebulaLibrary": [
         2989
       ]
     },
@@ -32,8 +32,8 @@
         "src": "33:24:17"
       },
       {
-        "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IShibaPair.sol",
-        "file": "../interfaces/IShibaPair.sol",
+        "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaPair.sol",
+        "file": "../interfaces/INebulaPair.sol",
         "id": 2514,
         "nodeType": "ImportDirective",
         "scope": 2990,
@@ -43,7 +43,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol",
+        "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 2515,
         "nodeType": "ImportDirective",
@@ -64,7 +64,7 @@
         "linearizedBaseContracts": [
           2989
         ],
-        "name": "ShibaLibrary",
+        "name": "NebulaLibrary",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -163,9 +163,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_94f8251bcf53949d19483d841fc48f780bfdafc2d04a22d2a61531c81e409727",
-                          "typeString": "literal_string \"ShibaLibrary: IDENTICAL_ADDRESSES\""
+                          "typeString": "literal_string \"NebulaLibrary: IDENTICAL_ADDRESSES\""
                         },
-                        "value": "ShibaLibrary: IDENTICAL_ADDRESSES"
+                        "value": "NebulaLibrary: IDENTICAL_ADDRESSES"
                       }
                     ],
                     "expression": {
@@ -176,7 +176,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_94f8251bcf53949d19483d841fc48f780bfdafc2d04a22d2a61531c81e409727",
-                          "typeString": "literal_string \"ShibaLibrary: IDENTICAL_ADDRESSES\""
+                          "typeString": "literal_string \"NebulaLibrary: IDENTICAL_ADDRESSES\""
                         }
                       ],
                       "id": 2529,
@@ -536,9 +536,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_7b8468e46427f38e465865be1d1f748dd545c1983c52451c7896436c87d5737a",
-                          "typeString": "literal_string \"ShibaLibrary: ZERO_ADDRESS\""
+                          "typeString": "literal_string \"NebulaLibrary: ZERO_ADDRESS\""
                         },
-                        "value": "ShibaLibrary: ZERO_ADDRESS"
+                        "value": "NebulaLibrary: ZERO_ADDRESS"
                       }
                     ],
                     "expression": {
@@ -549,7 +549,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_7b8468e46427f38e465865be1d1f748dd545c1983c52451c7896436c87d5737a",
-                          "typeString": "literal_string \"ShibaLibrary: ZERO_ADDRESS\""
+                          "typeString": "literal_string \"NebulaLibrary: ZERO_ADDRESS\""
                         }
                       ],
                       "id": 2551,
@@ -1789,14 +1789,14 @@
                             }
                           ],
                           "id": 2637,
-                          "name": "IShibaPair",
+                          "name": "INebulaPair",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 624,
                           "src": "1527:10:17",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_contract$_IShibaPair_$624_$",
-                            "typeString": "type(contract IShibaPair)"
+                            "typeIdentifier": "t_type$_t_contract$_INebulaPair_$624_$",
+                            "typeString": "type(contract INebulaPair)"
                           }
                         },
                         "id": 2643,
@@ -1810,8 +1810,8 @@
                         "src": "1527:44:17",
                         "tryCall": false,
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IShibaPair_$624",
-                          "typeString": "contract IShibaPair"
+                          "typeIdentifier": "t_contract$_INebulaPair_$624",
+                          "typeString": "contract INebulaPair"
                         }
                       },
                       "id": 2644,
@@ -2301,9 +2301,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_b386c0e3efd301523892af34d5abcf384b01c39877bdb34aa91b7cba40b05792",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_AMOUNT\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_AMOUNT"
+                        "value": "NebulaLibrary: INSUFFICIENT_AMOUNT"
                       }
                     ],
                     "expression": {
@@ -2314,7 +2314,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_b386c0e3efd301523892af34d5abcf384b01c39877bdb34aa91b7cba40b05792",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_AMOUNT\""
                         }
                       ],
                       "id": 2674,
@@ -2487,9 +2487,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                        "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                       }
                     ],
                     "expression": {
@@ -2500,7 +2500,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         }
                       ],
                       "id": 2681,
@@ -2883,9 +2883,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_e54ae2f2c1eeb26c5e07e390952b3044ceac720d3869e6629cee42221fceb375",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT"
+                        "value": "NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT"
                       }
                     ],
                     "expression": {
@@ -2896,7 +2896,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_e54ae2f2c1eeb26c5e07e390952b3044ceac720d3869e6629cee42221fceb375",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
                         }
                       ],
                       "id": 2713,
@@ -3069,9 +3069,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                        "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                       }
                     ],
                     "expression": {
@@ -3082,7 +3082,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         }
                       ],
                       "id": 2720,
@@ -3787,9 +3787,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_bfbb4d486f59b16794a44a8ea949d1eae263165159a9aa387f55e0485a070c23",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT"
+                        "value": "NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT"
                       }
                     ],
                     "expression": {
@@ -3800,7 +3800,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_bfbb4d486f59b16794a44a8ea949d1eae263165159a9aa387f55e0485a070c23",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
                         }
                       ],
                       "id": 2773,
@@ -3973,9 +3973,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         },
-                        "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                        "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                       }
                     ],
                     "expression": {
@@ -3986,7 +3986,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                          "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                          "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                         }
                       ],
                       "id": 2780,
@@ -4731,9 +4731,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                          "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                          "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                         },
-                        "value": "ShibaLibrary: INVALID_PATH"
+                        "value": "NebulaLibrary: INVALID_PATH"
                       }
                     ],
                     "expression": {
@@ -4744,7 +4744,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                          "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                          "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                         }
                       ],
                       "id": 2835,
@@ -5865,9 +5865,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                          "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                          "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                         },
-                        "value": "ShibaLibrary: INVALID_PATH"
+                        "value": "NebulaLibrary: INVALID_PATH"
                       }
                     ],
                     "expression": {
@@ -5878,7 +5878,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                          "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                          "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                         }
                       ],
                       "id": 2916,
@@ -6983,9 +6983,9 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/ShibaLibrary.sol",
+      "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/NebulaLibrary.sol",
       "exportedSymbols": {
-        "ShibaLibrary": [
+        "NebulaLibrary": [
           2989
         ]
       },
@@ -7008,8 +7008,8 @@
       {
         "attributes": {
           "SourceUnit": 625,
-          "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IShibaPair.sol",
-          "file": "../interfaces/IShibaPair.sol",
+          "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaPair.sol",
+          "file": "../interfaces/INebulaPair.sol",
           "scope": 2990,
           "symbolAliases": [
             null
@@ -7023,7 +7023,7 @@
       {
         "attributes": {
           "SourceUnit": 1975,
-          "absolutePath": "/D/DeployShiba/shibanova/contracts/libs/SafeMath.sol",
+          "absolutePath": "/D/DeployNebula/Nebulanova/contracts/libs/SafeMath.sol",
           "file": "./SafeMath.sol",
           "scope": 2990,
           "symbolAliases": [
@@ -7050,7 +7050,7 @@
           "linearizedBaseContracts": [
             2989
           ],
-          "name": "ShibaLibrary",
+          "name": "NebulaLibrary",
           "scope": 2990
         },
         "children": [
@@ -7257,7 +7257,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_94f8251bcf53949d19483d841fc48f780bfdafc2d04a22d2a61531c81e409727",
-                                  "typeString": "literal_string \"ShibaLibrary: IDENTICAL_ADDRESSES\""
+                                  "typeString": "literal_string \"NebulaLibrary: IDENTICAL_ADDRESSES\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -7330,8 +7330,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: IDENTICAL_ADDRESSES\"",
-                              "value": "ShibaLibrary: IDENTICAL_ADDRESSES"
+                              "type": "literal_string \"NebulaLibrary: IDENTICAL_ADDRESSES\"",
+                              "value": "NebulaLibrary: IDENTICAL_ADDRESSES"
                             },
                             "id": 2533,
                             "name": "Literal",
@@ -7592,7 +7592,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_7b8468e46427f38e465865be1d1f748dd545c1983c52451c7896436c87d5737a",
-                                  "typeString": "literal_string \"ShibaLibrary: ZERO_ADDRESS\""
+                                  "typeString": "literal_string \"NebulaLibrary: ZERO_ADDRESS\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -7718,8 +7718,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: ZERO_ADDRESS\"",
-                              "value": "ShibaLibrary: ZERO_ADDRESS"
+                              "type": "literal_string \"NebulaLibrary: ZERO_ADDRESS\"",
+                              "value": "NebulaLibrary: ZERO_ADDRESS"
                             },
                             "id": 2558,
                             "name": "Literal",
@@ -8967,7 +8967,7 @@
                                     null
                                   ],
                                   "tryCall": false,
-                                  "type": "contract IShibaPair",
+                                  "type": "contract INebulaPair",
                                   "type_conversion": true
                                 },
                                 "children": [
@@ -8983,8 +8983,8 @@
                                         null
                                       ],
                                       "referencedDeclaration": 624,
-                                      "type": "type(contract IShibaPair)",
-                                      "value": "IShibaPair"
+                                      "type": "type(contract INebulaPair)",
+                                      "value": "INebulaPair"
                                     },
                                     "id": 2637,
                                     "name": "Identifier",
@@ -9500,7 +9500,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_b386c0e3efd301523892af34d5abcf384b01c39877bdb34aa91b7cba40b05792",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_AMOUNT\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_AMOUNT\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -9576,8 +9576,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_AMOUNT\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_AMOUNT"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_AMOUNT\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_AMOUNT"
                             },
                             "id": 2678,
                             "name": "Literal",
@@ -9620,7 +9620,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -9767,8 +9767,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                             },
                             "id": 2689,
                             "name": "Literal",
@@ -10108,7 +10108,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_e54ae2f2c1eeb26c5e07e390952b3044ceac720d3869e6629cee42221fceb375",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -10184,8 +10184,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_INPUT_AMOUNT"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_INPUT_AMOUNT"
                             },
                             "id": 2717,
                             "name": "Literal",
@@ -10228,7 +10228,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -10375,8 +10375,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                             },
                             "id": 2728,
                             "name": "Literal",
@@ -11055,7 +11055,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_bfbb4d486f59b16794a44a8ea949d1eae263165159a9aa387f55e0485a070c23",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -11131,8 +11131,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_OUTPUT_AMOUNT"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_OUTPUT_AMOUNT"
                             },
                             "id": 2777,
                             "name": "Literal",
@@ -11175,7 +11175,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_f200917bb84b33f66f32014de77220daee49e31da11d9c803dd1016e874f4ce8",
-                                  "typeString": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\""
+                                  "typeString": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -11322,8 +11322,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INSUFFICIENT_LIQUIDITY\"",
-                              "value": "ShibaLibrary: INSUFFICIENT_LIQUIDITY"
+                              "type": "literal_string \"NebulaLibrary: INSUFFICIENT_LIQUIDITY\"",
+                              "value": "NebulaLibrary: INSUFFICIENT_LIQUIDITY"
                             },
                             "id": 2788,
                             "name": "Literal",
@@ -12048,7 +12048,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                                  "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                                  "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -12141,8 +12141,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INVALID_PATH\"",
-                              "value": "ShibaLibrary: INVALID_PATH"
+                              "type": "literal_string \"NebulaLibrary: INVALID_PATH\"",
+                              "value": "NebulaLibrary: INVALID_PATH"
                             },
                             "id": 2840,
                             "name": "Literal",
@@ -13247,7 +13247,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_7e15f4e446c1f9b8d0b69b494124f4c2df5b238ade14143f420433d28fea79e7",
-                                  "typeString": "literal_string \"ShibaLibrary: INVALID_PATH\""
+                                  "typeString": "literal_string \"NebulaLibrary: INVALID_PATH\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -13340,8 +13340,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaLibrary: INVALID_PATH\"",
-                              "value": "ShibaLibrary: INVALID_PATH"
+                              "type": "literal_string \"NebulaLibrary: INVALID_PATH\"",
+                              "value": "NebulaLibrary: INVALID_PATH"
                             },
                             "id": 2921,
                             "name": "Literal",

@@ -2,7 +2,7 @@
 
 pragma solidity >=0.5.16;
 
-interface IShibaPair {
+interface INebulaPair {
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
 

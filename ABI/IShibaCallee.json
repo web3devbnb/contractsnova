@@ -1,5 +1,5 @@
 {
-  "contractName": "IShibaCallee",
+  "contractName": "INebulaCallee",
   "abi": [
     {
       "inputs": [
@@ -30,18 +30,18 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"pancakeCall\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IShibaCallee.sol\":\"IShibaCallee\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IShibaCallee.sol\":{\"keccak256\":\"0x9fc699b3142079039747214bd652a80be7e3403e3f61c95f7292bcbd7fde9a27\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0d28f65f89943952a2cbed9a599f66292fbe74b40fc6bb821cce5281363ecbfc\",\"dweb:/ipfs/QmcNv8zap4TsRTRK22BpjAUFCP4srgi5nLzQiuL9v4nMnG\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"pancakeCall\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaCallee.sol\":\"INebulaCallee\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaCallee.sol\":{\"keccak256\":\"0x9fc699b3142079039747214bd652a80be7e3403e3f61c95f7292bcbd7fde9a27\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0d28f65f89943952a2cbed9a599f66292fbe74b40fc6bb821cce5281363ecbfc\",\"dweb:/ipfs/QmcNv8zap4TsRTRK22BpjAUFCP4srgi5nLzQiuL9v4nMnG\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0;\r\n\r\ninterface IShibaCallee {\r\n    function pancakeCall(address sender, uint amount0, uint amount1, bytes calldata data) external;\r\n}\r\n",
-  "sourcePath": "D:/DeployShiba/shibanova/contracts/interfaces/IShibaCallee.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.0;\r\n\r\ninterface INebulaCallee {\r\n    function pancakeCall(address sender, uint amount0, uint amount1, bytes calldata data) external;\r\n}\r\n",
+  "sourcePath": "D:/DeployNebula/Nebulanova/contracts/interfaces/INebulaCallee.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IShibaCallee.sol",
+    "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaCallee.sol",
     "exportedSymbols": {
-      "IShibaCallee": [
+      "INebulaCallee": [
         7791
       ]
     },
@@ -71,7 +71,7 @@
         "linearizedBaseContracts": [
           7791
         ],
-        "name": "IShibaCallee",
+        "name": "INebulaCallee",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -226,9 +226,9 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IShibaCallee.sol",
+      "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/INebulaCallee.sol",
       "exportedSymbols": {
-        "IShibaCallee": [
+        "INebulaCallee": [
           7791
         ]
       },
@@ -263,7 +263,7 @@
           "linearizedBaseContracts": [
             7791
           ],
-          "name": "IShibaCallee",
+          "name": "INebulaCallee",
           "scope": 7792
         },
         "children": [

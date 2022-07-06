@@ -12,7 +12,7 @@ The purpose of this contract is to allow us adding bonus to user's reward by add
 without updating the masterChef
 The owner of this contract will be transferred to a timelock
 */
-contract ShibaBonusAggregator is Ownable, IBonusAggregator{
+contract NebulaBonusAggregator is Ownable, IBonusAggregator{
     using SafeMath for uint256;
 
     IMasterBonus master;

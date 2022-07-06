@@ -25,16 +25,16 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_pid\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bonus\",\"type\":\"uint256\"}],\"name\":\"updateUserBonus\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IMasterBonus.sol\":\"IMasterBonus\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/shibanova/contracts/interfaces/IMasterBonus.sol\":{\"keccak256\":\"0xf0028f576772b01c803f775a4c414f44f352f83af074e718a71c11de6cdcfe6c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1cf1c254a3e02f914ab0de20c7c2190da2c50586e1347e1bbf193cdf54fca74e\",\"dweb:/ipfs/QmWxaUWCD12ncXetKDkNeU4ypgGPfLFiPytyzsrcm7H8mF\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_pid\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bonus\",\"type\":\"uint256\"}],\"name\":\"updateUserBonus\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/IMasterBonus.sol\":\"IMasterBonus\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/Nebulanova/contracts/interfaces/IMasterBonus.sol\":{\"keccak256\":\"0xf0028f576772b01c803f775a4c414f44f352f83af074e718a71c11de6cdcfe6c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1cf1c254a3e02f914ab0de20c7c2190da2c50586e1347e1bbf193cdf54fca74e\",\"dweb:/ipfs/QmWxaUWCD12ncXetKDkNeU4ypgGPfLFiPytyzsrcm7H8mF\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity 0.6.12;\r\n\r\ninterface IMasterBonus {\r\n    function updateUserBonus(address _user, uint256 _pid, uint256 bonus) external;\r\n}\r\n",
-  "sourcePath": "D:\\DeployShiba\\shibanova\\contracts\\interfaces\\IMasterBonus.sol",
+  "sourcePath": "D:\\DeployNebula\\Nebulanova\\contracts\\interfaces\\IMasterBonus.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IMasterBonus.sol",
+    "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/IMasterBonus.sol",
     "exportedSymbols": {
       "IMasterBonus": [
         280
@@ -192,7 +192,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/shibanova/contracts/interfaces/IMasterBonus.sol",
+      "absolutePath": "/D/DeployNebula/Nebulanova/contracts/interfaces/IMasterBonus.sol",
       "exportedSymbols": {
         "IMasterBonus": [
           280

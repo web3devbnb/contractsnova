@@ -13,7 +13,7 @@ import "./Address.sol";
  * This implementation is a copy of @pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol
  * with a burn supply management.
  */
-contract ShibaBEP20 is Context, IBEP20, Ownable {
+contract NebulaBEP20 is Context, IBEP20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 

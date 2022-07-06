@@ -2,9 +2,9 @@
 
 pragma solidity 0.6.12;
 
-import "./libs/ShibaBEP20.sol";
+import "./libs/NebulaBEP20.sol";
 
-contract NovaToken is ShibaBEP20("ShibaNOVA ", "NOVA") {
+contract NovaToken is NebulaBEP20("NebulaNOVA ", "NOVA") {
 
     address public sNova;
 
@@ -34,7 +34,7 @@ contract NovaToken is ShibaBEP20("ShibaNOVA ", "NOVA") {
         sNova = _sNova;
     }
 
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterShiba).
+    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterNebula).
     function mint(address _to, uint256 _amount) external virtual override onlyOwnerOrSNova  {
         _mint(_to, _amount);
     }

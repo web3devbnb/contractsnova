@@ -7,8 +7,8 @@ import "./libs/SafeMath.sol";
 import "./libs/IBEP20.sol";
 import "./libs/SafeBEP20.sol";
 import "./interfaces/IMoneyPot.sol";
-import "./interfaces/IShibaRouter02.sol";
-import "./interfaces/IShibaPair.sol";
+import "./interfaces/INebulaRouter02.sol";
+import "./interfaces/INebulaPair.sol";
 
 /*
 The FeeManager is a kind of contract-wallet that allows the owner or SNOVA holders to unbind (LP) and swap tokens
@@ -39,7 +39,7 @@ contract DecentralizedFeeManager is Ownable{
     event UpdatedMoneyPotShares(uint256 indexed previousMoneyPotShare, uint256 newMoneyPotShare);
 
     IMoneyPot public moneyPot;
-    IShibaRouter02 public router;
+    INebulaRouter02 public router;
     IBEP20 public SNova;
 
     address public teamAddr; // Used for dev/marketing and others funds for project
@@ -61,7 +61,7 @@ contract DecentralizedFeeManager is Ownable{
     }
 
     // add LP tokens to list to allow easy liquidity removal. We should only add the common tokens, 
-    // to reduce chances of gas error on removeallLiquidity. DO NOT ADD NON SHIBA-LP TOKENS.
+    // to reduce chances of gas error on removeallLiquidity. DO NOT ADD NON Nebula-LP TOKENS.
     function addTokenToRegisteredLP(address _token) external {
         require(address(_token) != address(0), 'Cannot set zero address');
         require(IBEP20(SNova).balanceOf(msg.sender) > tier2 || address(msg.sender) == owner(), 'User must hold more than the Tier 2 amount of SNOVA');
@@ -108,7 +108,7 @@ contract DecentralizedFeeManager is Ownable{
     function removeLiquidityToToken(address _token) external {
         require(address(_token) != address(0), 'Cannot set zero address');
         require(IBEP20(SNova).balanceOf(msg.sender) > tier1 || address(msg.sender) == owner(), 'User must hold more than the Tier 1 amount of SNOVA');
-        IShibaPair _pair = IShibaPair(_token);
+        INebulaPair _pair = INebulaPair(_token);
         uint256 _amount = _pair.balanceOf(address(this));
         address token0 = _pair.token0();
         address token1 = _pair.token1();
@@ -118,7 +118,7 @@ contract DecentralizedFeeManager is Ownable{
     }
     // internal function used by removeAllLiquidityToToken
     function _removeLiquidityToToken(address _token) internal {
-        IShibaPair _pair = IShibaPair(_token);
+        INebulaPair _pair = INebulaPair(_token);
         uint256 _amount = _pair.balanceOf(address(this));
         address token0 = _pair.token0();
         address token1 = _pair.token1();
@@ -180,7 +180,7 @@ contract DecentralizedFeeManager is Ownable{
 
     function setupRouter(address _router) external onlyOwner{
         require(address(_router) != address(0), 'Cannot set as 0 address');
-        router = IShibaRouter02(_router);
+        router = INebulaRouter02(_router);
     }
 
     function setupMoneyPot(IMoneyPot _moneyPot) external onlyOwner{

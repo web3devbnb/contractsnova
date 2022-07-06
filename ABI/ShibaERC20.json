@@ -1,5 +1,5 @@
 {
-  "contractName": "ShibaERC20",
+  "contractName": "NebulaERC20",
   "abi": [
     {
       "inputs": [],
@@ -344,17 +344,17 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"PERMIT_TYPEHASH\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"nonces\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"permit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/DeployShiba/ShibaFactory/contracts/ShibaERC20.sol\":\"ShibaERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployShiba/ShibaFactory/contracts/ShibaERC20.sol\":{\"keccak256\":\"0xdca66ef5a21d32e3269c91afd7a3e4bd152675c14be0d2ab8f5c66e7830b413c\",\"urls\":[\"bzz-raw://8bccfde34c09f3eebbe673018345d371e377d23bd17787322489ab3674ad41ab\",\"dweb:/ipfs/QmSX7e5MRh1d8Va4AomR6v9dcyq716z1doeN6mBWEYSzpg\"]},\"/D/DeployShiba/ShibaFactory/contracts/interfaces/IShibaERC20.sol\":{\"keccak256\":\"0xf03849cf5a7528b51f1ac0b6de06b946701db384b25db759f0fe8d10e2a9355b\",\"urls\":[\"bzz-raw://4bfc82116e41a5e55f8da1b690966a16f00a99726f12392ed4ab7ade2f672530\",\"dweb:/ipfs/QmaHSYYAcpJ2tN9vXovd1Uxb84qL14R5Xs6LCFek9HGmPu\"]},\"/D/DeployShiba/ShibaFactory/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"PERMIT_TYPEHASH\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"nonces\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"permit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/DeployNebula/NebulaFactory/contracts/NebulaERC20.sol\":\"NebulaERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/DeployNebula/NebulaFactory/contracts/NebulaERC20.sol\":{\"keccak256\":\"0xdca66ef5a21d32e3269c91afd7a3e4bd152675c14be0d2ab8f5c66e7830b413c\",\"urls\":[\"bzz-raw://8bccfde34c09f3eebbe673018345d371e377d23bd17787322489ab3674ad41ab\",\"dweb:/ipfs/QmSX7e5MRh1d8Va4AomR6v9dcyq716z1doeN6mBWEYSzpg\"]},\"/D/DeployNebula/NebulaFactory/contracts/interfaces/INebulaERC20.sol\":{\"keccak256\":\"0xf03849cf5a7528b51f1ac0b6de06b946701db384b25db759f0fe8d10e2a9355b\",\"urls\":[\"bzz-raw://4bfc82116e41a5e55f8da1b690966a16f00a99726f12392ed4ab7ade2f672530\",\"dweb:/ipfs/QmaHSYYAcpJ2tN9vXovd1Uxb84qL14R5Xs6LCFek9HGmPu\"]},\"/D/DeployNebula/NebulaFactory/contracts/libs/SafeMath.sol\":{\"keccak256\":\"0x9ed09430799b39e964ba0a2c16d93e6ef107338413cdbdbc2837ee7440706447\",\"urls\":[\"bzz-raw://5e941b0d3fdbd6e8c803ff762c6ff4aef6a0c3cb4023ffd939c6f7fec138f2d0\",\"dweb:/ipfs/QmXsbw7m5SrbYvYkP8wRRu1zcVGJbj7m6xwnWg2XbugLLA\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b506040514690806052610a128239604080519182900360520182208282018252600d83526c53686962614e6f7661204c507360981b6020938401528151808301835260018152603160f81b908401528151808401919091527fd25f695115dc46a37c0b9c5f347e95df771f897c90e728aaeee3b81071d32683818301527fc89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6606082015260808101949094523060a0808601919091528151808603909101815260c09094019052825192019190912060035550610921806100f16000396000f3fe608060405234801561001057600080fd5b50600436106100cf5760003560e01c80633644e5151161008c57806395d89b411161006657806395d89b411461025b578063a9059cbb14610263578063d505accf1461028f578063dd62ed3e146102e2576100cf565b80633644e5151461020757806370a082311461020f5780637ecebe0014610235576100cf565b806306fdde03146100d4578063095ea7b31461015157806318160ddd1461019157806323b872dd146101ab57806330adf81f146101e1578063313ce567146101e9575b600080fd5b6100dc610310565b6040805160208082528351818301528351919283929083019185019080838360005b838110156101165781810151838201526020016100fe565b50505050905090810190601f1680156101435780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61017d6004803603604081101561016757600080fd5b506001600160a01b038135169060200135610339565b604080519115158252519081900360200190f35b61019961034f565b60408051918252519081900360200190f35b61017d600480360360608110156101c157600080fd5b506001600160a01b03813581169160208101359091169060400135610355565b6101996103ef565b6101f1610413565b6040805160ff9092168252519081900360200190f35b610199610418565b6101996004803603602081101561022557600080fd5b50356001600160a01b031661041e565b6101996004803603602081101561024b57600080fd5b50356001600160a01b0316610430565b6100dc610442565b61017d6004803603604081101561027957600080fd5b506001600160a01b038135169060200135610466565b6102e0600480360360e08110156102a557600080fd5b506001600160a01b03813581169160208101359091169060408101359060608101359060ff6080820135169060a08101359060c00135610473565b005b610199600480360360408110156102f857600080fd5b506001600160a01b0381358116916020013516610679565b6040518060400160405280600d81526020016c53686962614e6f7661204c507360981b81525081565b6000610346338484610696565b50600192915050565b60005481565b6001600160a01b0383166000908152600260209081526040808320338452909152812054600019146103da576001600160a01b03841660009081526002602090815260408083203384529091529020546103b5908363ffffffff6106f816565b6001600160a01b03851660009081526002602090815260408083203384529091529020555b6103e5848484610741565b5060019392505050565b7f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c981565b601281565b60035481565b60016020526000908152604090205481565b60046020526000908152604090205481565b60405180604001604052806008815260200167053484942412d4c560c41b81525081565b6000610346338484610741565b428410156104c1576040805162461bcd60e51b815260206004820152601660248201527514da1a5898539bdd9854ddd85c0e881156141254915160521b604482015290519081900360640190fd5b6003546001600160a01b0380891660008181526004602090815260408083208054600180820190925582517f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c98186015280840196909652958d166060860152608085018c905260a085019590955260c08085018b90528151808603909101815260e08501825280519083012061190160f01b6101008601526101028501969096526101228085019690965280518085039096018652610142840180825286519683019690962095839052610162840180825286905260ff89166101828501526101a284018890526101c28401879052519193926101e280820193601f1981019281900390910190855afa1580156105dc573d6000803e3d6000fd5b5050604051601f1901519150506001600160a01b038116158015906106125750886001600160a01b0316816001600160a01b0316145b610663576040805162461bcd60e51b815260206004820181905260248201527f53686962614e6f7661537761703a20494e56414c49445f5349474e4154555245604482015290519081900360640190fd5b61066e898989610696565b505050505050505050565b600260209081526000928352604080842090915290825290205481565b6001600160a01b03808416600081815260026020908152604080832094871680845294825291829020859055815185815291517f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259281900390910190a3505050565b600061073a83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506107fb565b9392505050565b6001600160a01b03831660009081526001602052604090205461076a908263ffffffff6106f816565b6001600160a01b03808516600090815260016020526040808220939093559084168152205461079f908263ffffffff61089216565b6001600160a01b0380841660008181526001602090815260409182902094909455805185815290519193928716927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef92918290030190a3505050565b6000818484111561088a5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561084f578181015183820152602001610837565b50505050905090810190601f16801561087c5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b60008282018381101561073a576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fdfea265627a7a723158203539ff1b4077ac7cbcd934693d0f6aec56a74db0487b0ce3d3c379962c0a43fa64736f6c63430005100032454950373132446f6d61696e28737472696e67206e616d652c737472696e672076657273696f6e2c75696e7432353620636861696e49642c6164647265737320766572696679696e67436f6e747261637429",
   "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100cf5760003560e01c80633644e5151161008c57806395d89b411161006657806395d89b411461025b578063a9059cbb14610263578063d505accf1461028f578063dd62ed3e146102e2576100cf565b80633644e5151461020757806370a082311461020f5780637ecebe0014610235576100cf565b806306fdde03146100d4578063095ea7b31461015157806318160ddd1461019157806323b872dd146101ab57806330adf81f146101e1578063313ce567146101e9575b600080fd5b6100dc610310565b6040805160208082528351818301528351919283929083019185019080838360005b838110156101165781810151838201526020016100fe565b50505050905090810190601f1680156101435780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61017d6004803603604081101561016757600080fd5b506001600160a01b038135169060200135610339565b604080519115158252519081900360200190f35b61019961034f565b60408051918252519081900360200190f35b61017d600480360360608110156101c157600080fd5b506001600160a01b03813581169160208101359091169060400135610355565b6101996103ef565b6101f1610413565b6040805160ff9092168252519081900360200190f35b610199610418565b6101996004803603602081101561022557600080fd5b50356001600160a01b031661041e565b6101996004803603602081101561024b57600080fd5b50356001600160a01b0316610430565b6100dc610442565b61017d6004803603604081101561027957600080fd5b506001600160a01b038135169060200135610466565b6102e0600480360360e08110156102a557600080fd5b506001600160a01b03813581169160208101359091169060408101359060608101359060ff6080820135169060a08101359060c00135610473565b005b610199600480360360408110156102f857600080fd5b506001600160a01b0381358116916020013516610679565b6040518060400160405280600d81526020016c53686962614e6f7661204c507360981b81525081565b6000610346338484610696565b50600192915050565b60005481565b6001600160a01b0383166000908152600260209081526040808320338452909152812054600019146103da576001600160a01b03841660009081526002602090815260408083203384529091529020546103b5908363ffffffff6106f816565b6001600160a01b03851660009081526002602090815260408083203384529091529020555b6103e5848484610741565b5060019392505050565b7f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c981565b601281565b60035481565b60016020526000908152604090205481565b60046020526000908152604090205481565b60405180604001604052806008815260200167053484942412d4c560c41b81525081565b6000610346338484610741565b428410156104c1576040805162461bcd60e51b815260206004820152601660248201527514da1a5898539bdd9854ddd85c0e881156141254915160521b604482015290519081900360640190fd5b6003546001600160a01b0380891660008181526004602090815260408083208054600180820190925582517f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c98186015280840196909652958d166060860152608085018c905260a085019590955260c08085018b90528151808603909101815260e08501825280519083012061190160f01b6101008601526101028501969096526101228085019690965280518085039096018652610142840180825286519683019690962095839052610162840180825286905260ff89166101828501526101a284018890526101c28401879052519193926101e280820193601f1981019281900390910190855afa1580156105dc573d6000803e3d6000fd5b5050604051601f1901519150506001600160a01b038116158015906106125750886001600160a01b0316816001600160a01b0316145b610663576040805162461bcd60e51b815260206004820181905260248201527f53686962614e6f7661537761703a20494e56414c49445f5349474e4154555245604482015290519081900360640190fd5b61066e898989610696565b505050505050505050565b600260209081526000928352604080842090915290825290205481565b6001600160a01b03808416600081815260026020908152604080832094871680845294825291829020859055815185815291517f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259281900390910190a3505050565b600061073a83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f7700008152506107fb565b9392505050565b6001600160a01b03831660009081526001602052604090205461076a908263ffffffff6106f816565b6001600160a01b03808516600090815260016020526040808220939093559084168152205461079f908263ffffffff61089216565b6001600160a01b0380841660008181526001602090815260409182902094909455805185815290519193928716927fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef92918290030190a3505050565b6000818484111561088a5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561084f578181015183820152602001610837565b50505050905090810190601f16801561087c5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b60008282018381101561073a576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fdfea265627a7a723158203539ff1b4077ac7cbcd934693d0f6aec56a74db0487b0ce3d3c379962c0a43fa64736f6c63430005100032",
   "sourceMap": "134:3422:0:-;;;963:458;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1153:95:0;;1053:7;;1153:95;;;;;;;;;;;;;;;;1283:4;;;;;;;;-1:-1:-1;;;1283:4:0;;;;;1318:10;;;;;;;;;;-1:-1:-1;;;1318:10:0;;;;1124:278;;;;;;;;;1267:22;1124:278;;;;1308:21;1124:278;;;;;;;;;;;1382:4;1124:278;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;1124:278:0;;;;;;1100:313;;;;;;;;1081:16;:332;-1:-1:-1;134:3422:0;;;;;;",
   "deployedSourceMap": "134:3422:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;134:3422:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;208:45;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;208:45:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2260:147;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;2260:147:0;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;351:24;;;:::i;:::-;;;;;;;;;;;;;;;;2562:301;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;2562:301:0;;;;;;;;;;;;;;;;;:::i;643:108::-;;;:::i;309:35::-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;500:31;;;:::i;382:41::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;382:41:0;-1:-1:-1;;;;;382:41:0;;:::i;758:38::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;758:38:0;-1:-1:-1;;;;;758:38:0;;:::i;260:42::-;;;:::i;2415:139::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;2415:139:0;;;;;;;;:::i;2871:682::-;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;-1:-1;;;;;;2871:682:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;430:61;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;430:61:0;;;;;;;;;;:::i;208:45::-;;;;;;;;;;;;;;-1:-1:-1;;;208:45:0;;;;:::o;2260:147::-;2324:4;2341:36;2350:10;2362:7;2371:5;2341:8;:36::i;:::-;-1:-1:-1;2395:4:0;2260:147;;;;:::o;351:24::-;;;;:::o;2562:301::-;-1:-1:-1;;;;;2661:15:0;;2640:4;2661:15;;;:9;:15;;;;;;;;2677:10;2661:27;;;;;;;;-1:-1:-1;;2661:39:0;2657:140;;-1:-1:-1;;;;;2747:15:0;;;;;;:9;:15;;;;;;;;2763:10;2747:27;;;;;;;;:38;;2779:5;2747:38;:31;:38;:::i;:::-;-1:-1:-1;;;;;2717:15:0;;;;;;:9;:15;;;;;;;;2733:10;2717:27;;;;;;;:68;2657:140;2807:26;2817:4;2823:2;2827:5;2807:9;:26::i;:::-;-1:-1:-1;2851:4:0;2562:301;;;;;:::o;643:108::-;685:66;643:108;:::o;309:35::-;342:2;309:35;:::o;500:31::-;;;;:::o;382:41::-;;;;;;;;;;;;;:::o;758:38::-;;;;;;;;;;;;;:::o;260:42::-;;;;;;;;;;;;;;-1:-1:-1;;;260:42:0;;;;:::o;2415:139::-;2475:4;2492:32;2502:10;2514:2;2518:5;2492:9;:32::i;2871:682::-;3017:15;3005:8;:27;;2997:62;;;;;-1:-1:-1;;;2997:62:0;;;;;;;;;;;;-1:-1:-1;;;2997:62:0;;;;;;;;;;;;;;;3175:16;;-1:-1:-1;;;;;3271:13:0;;;3070:14;3271:13;;;:6;:13;;;;;;;;:15;;;;;;;;;3220:77;;685:66;3220:77;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;3220:77:0;;;;;3210:88;;;;;;-1:-1:-1;;;3111:202:0;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;3111:202:0;;;;;;3087:237;;;;;;;;;3362:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3070:14;;3271:15;3362:26;;;;;-1:-1:-1;;3362:26:0;;;;;;;;;;3271:15;3362:26;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;;3362:26:0;;-1:-1:-1;;3362:26:0;;;-1:-1:-1;;;;;;;3407:30:0;;;;;;:59;;;3461:5;-1:-1:-1;;;;;3441:25:0;:16;-1:-1:-1;;;;;3441:25:0;;3407:59;3399:104;;;;;-1:-1:-1;;;3399:104:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3514:31;3523:5;3530:7;3539:5;3514:8;:31::i;:::-;2871:682;;;;;;;;;:::o;430:61::-;;;;;;;;;;;;;;;;;;;;;;;;:::o;1855:169::-;-1:-1:-1;;;;;1936:16:0;;;;;;;:9;:16;;;;;;;;:25;;;;;;;;;;;;;:33;;;1985:31;;;;;;;;;;;;;;;;;1855:169;;;:::o;1367:136:8:-;1425:7;1452:43;1456:1;1459;1452:43;;;;;;;;;;;;;;;;;:3;:43::i;:::-;1445:50;1367:136;-1:-1:-1;;;1367:136:8:o;2032:220:0:-;-1:-1:-1;;;;;2126:15:0;;;;;;:9;:15;;;;;;:26;;2146:5;2126:26;:19;:26;:::i;:::-;-1:-1:-1;;;;;2108:15:0;;;;;;;:9;:15;;;;;;:44;;;;2179:13;;;;;;;:24;;2197:5;2179:24;:17;:24;:::i;:::-;-1:-1:-1;;;;;2163:13:0;;;;;;;:9;:13;;;;;;;;;:40;;;;2219:25;;;;;;;2163:13;;2219:25;;;;;;;;;;;;;2032:220;;;:::o;1806:226:8:-;1926:7;1962:12;1954:6;;;;1946:29;;;;-1:-1:-1;;;1946:29:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1946:29:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1998:5:8;;;1806:226::o;903:181::-;961:7;993:5;;;1017:6;;;;1009:46;;;;;-1:-1:-1;;;1009:46:8;;;;;;;;;;;;;;;;;;;;;;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity =0.5.16;\r\n\r\nimport './interfaces/IShibaERC20.sol';\r\nimport './libs/SafeMath.sol';\r\n\r\ncontract ShibaERC20 is IShibaERC20 {\r\n    using SafeMath for uint;\r\n\r\n    string public constant name = 'ShibaNova LPs';\r\n    string public constant symbol = 'SHIBA-LP';\r\n    uint8 public constant decimals = 18;\r\n    uint  public totalSupply;\r\n    mapping(address => uint) public balanceOf;\r\n    mapping(address => mapping(address => uint)) public allowance;\r\n\r\n    bytes32 public DOMAIN_SEPARATOR;\r\n    // keccak256(\"Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)\");\r\n    bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;\r\n    mapping(address => uint) public nonces;\r\n\r\n    event Approval(address indexed owner, address indexed spender, uint value);\r\n    event Transfer(address indexed from, address indexed to, uint value);\r\n\r\n    constructor() public {\r\n        uint chainId;\r\n        assembly {\r\n            chainId := chainid\r\n        }\r\n        DOMAIN_SEPARATOR = keccak256(\r\n            abi.encode(\r\n                keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),\r\n                keccak256(bytes(name)),\r\n                keccak256(bytes('1')),\r\n                chainId,\r\n                address(this)\r\n            )\r\n        );\r\n    }\r\n\r\n    function _mint(address to, uint value) internal {\r\n        totalSupply = totalSupply.add(value);\r\n        balanceOf[to] = balanceOf[to].add(value);\r\n        emit Transfer(address(0), to, value);\r\n    }\r\n\r\n    function _burn(address from, uint value) internal {\r\n        balanceOf[from] = balanceOf[from].sub(value);\r\n        totalSupply = totalSupply.sub(value);\r\n        emit Transfer(from, address(0), value);\r\n    }\r\n\r\n    function _approve(address owner, address spender, uint value) private {\r\n        allowance[owner][spender] = value;\r\n        emit Approval(owner, spender, value);\r\n    }\r\n\r\n    function _transfer(address from, address to, uint value) private {\r\n        balanceOf[from] = balanceOf[from].sub(value);\r\n        balanceOf[to] = balanceOf[to].add(value);\r\n        emit Transfer(from, to, value);\r\n    }\r\n\r\n    function approve(address spender, uint value) external returns (bool) {\r\n        _approve(msg.sender, spender, value);\r\n        return true;\r\n    }\r\n\r\n    function transfer(address to, uint value) external returns (bool) {\r\n        _transfer(msg.sender, to, value);\r\n        return true;\r\n    }\r\n\r\n    function transferFrom(address from, address to, uint value) external returns (bool) {\r\n        if (allowance[from][msg.sender] != uint(-1)) {\r\n            allowance[from][msg.sender] = allowance[from][msg.sender].sub(value);\r\n        }\r\n        _transfer(from, to, value);\r\n        return true;\r\n    }\r\n\r\n    function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {\r\n        require(deadline >= block.timestamp, 'ShibaNovaSwap: EXPIRED');\r\n        bytes32 digest = keccak256(\r\n            abi.encodePacked(\r\n                '\\x19\\x01',\r\n                DOMAIN_SEPARATOR,\r\n                keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))\r\n            )\r\n        );\r\n        address recoveredAddress = ecrecover(digest, v, r, s);\r\n        require(recoveredAddress != address(0) && recoveredAddress == owner, 'ShibaNovaSwap: INVALID_SIGNATURE');\r\n        _approve(owner, spender, value);\r\n    }\r\n}",
-  "sourcePath": "D:\\DeployShiba\\ShibaFactory\\contracts\\ShibaERC20.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity =0.5.16;\r\n\r\nimport './interfaces/INebulaERC20.sol';\r\nimport './libs/SafeMath.sol';\r\n\r\ncontract NebulaERC20 is INebulaERC20 {\r\n    using SafeMath for uint;\r\n\r\n    string public constant name = 'NebulaNova LPs';\r\n    string public constant symbol = 'Nebula-LP';\r\n    uint8 public constant decimals = 18;\r\n    uint  public totalSupply;\r\n    mapping(address => uint) public balanceOf;\r\n    mapping(address => mapping(address => uint)) public allowance;\r\n\r\n    bytes32 public DOMAIN_SEPARATOR;\r\n    // keccak256(\"Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)\");\r\n    bytes32 public constant PERMIT_TYPEHASH = 0x9575befd1adf594c548618453cdba973cf24bf74bbeb716f9df2c2c6b5c7b818;\r\n    mapping(address => uint) public nonces;\r\n\r\n    event Approval(address indexed owner, address indexed spender, uint value);\r\n    event Transfer(address indexed from, address indexed to, uint value);\r\n\r\n    constructor() public {\r\n        uint chainId;\r\n        assembly {\r\n            chainId := chainid\r\n        }\r\n        DOMAIN_SEPARATOR = keccak256(\r\n            abi.encode(\r\n                keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),\r\n                keccak256(bytes(name)),\r\n                keccak256(bytes('1')),\r\n                chainId,\r\n                address(this)\r\n            )\r\n        );\r\n    }\r\n\r\n    function _mint(address to, uint value) internal {\r\n        totalSupply = totalSupply.add(value);\r\n        balanceOf[to] = balanceOf[to].add(value);\r\n        emit Transfer(address(0), to, value);\r\n    }\r\n\r\n    function _burn(address from, uint value) internal {\r\n        balanceOf[from] = balanceOf[from].sub(value);\r\n        totalSupply = totalSupply.sub(value);\r\n        emit Transfer(from, address(0), value);\r\n    }\r\n\r\n    function _approve(address owner, address spender, uint value) private {\r\n        allowance[owner][spender] = value;\r\n        emit Approval(owner, spender, value);\r\n    }\r\n\r\n    function _transfer(address from, address to, uint value) private {\r\n        balanceOf[from] = balanceOf[from].sub(value);\r\n        balanceOf[to] = balanceOf[to].add(value);\r\n        emit Transfer(from, to, value);\r\n    }\r\n\r\n    function approve(address spender, uint value) external returns (bool) {\r\n        _approve(msg.sender, spender, value);\r\n        return true;\r\n    }\r\n\r\n    function transfer(address to, uint value) external returns (bool) {\r\n        _transfer(msg.sender, to, value);\r\n        return true;\r\n    }\r\n\r\n    function transferFrom(address from, address to, uint value) external returns (bool) {\r\n        if (allowance[from][msg.sender] != uint(-1)) {\r\n            allowance[from][msg.sender] = allowance[from][msg.sender].sub(value);\r\n        }\r\n        _transfer(from, to, value);\r\n        return true;\r\n    }\r\n\r\n    function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {\r\n        require(deadline >= block.timestamp, 'NebulaNovaSwap: EXPIRED');\r\n        bytes32 digest = keccak256(\r\n            abi.encodePacked(\r\n                '\\x19\\x01',\r\n                DOMAIN_SEPARATOR,\r\n                keccak256(abi.encode(PERMIT_TYPEHASH, owner, spender, value, nonces[owner]++, deadline))\r\n            )\r\n        );\r\n        address recoveredAddress = ecrecover(digest, v, r, s);\r\n        require(recoveredAddress != address(0) && recoveredAddress == owner, 'NebulaNovaSwap: INVALID_SIGNATURE');\r\n        _approve(owner, spender, value);\r\n    }\r\n}",
+  "sourcePath": "D:\\DeployNebula\\NebulaFactory\\contracts\\NebulaERC20.sol",
   "ast": {
-    "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/ShibaERC20.sol",
+    "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/NebulaERC20.sol",
     "exportedSymbols": {
-      "ShibaERC20": [
+      "NebulaERC20": [
         384
       ]
     },
@@ -373,8 +373,8 @@
         "src": "33:24:0"
       },
       {
-        "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/interfaces/IShibaERC20.sol",
-        "file": "./interfaces/IShibaERC20.sol",
+        "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/interfaces/INebulaERC20.sol",
+        "file": "./interfaces/INebulaERC20.sol",
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 385,
@@ -384,7 +384,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/libs/SafeMath.sol",
+        "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/libs/SafeMath.sol",
         "file": "./libs/SafeMath.sol",
         "id": 3,
         "nodeType": "ImportDirective",
@@ -401,13 +401,13 @@
             "baseName": {
               "contractScope": null,
               "id": 4,
-              "name": "IShibaERC20",
+              "name": "INebulaERC20",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 1645,
               "src": "157:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IShibaERC20_$1645",
-                "typeString": "contract IShibaERC20"
+                "typeIdentifier": "t_contract$_INebulaERC20_$1645",
+                "typeString": "contract INebulaERC20"
               }
             },
             "id": 5,
@@ -426,7 +426,7 @@
           384,
           1645
         ],
-        "name": "ShibaERC20",
+        "name": "NebulaERC20",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -493,9 +493,9 @@
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_d25f695115dc46a37c0b9c5f347e95df771f897c90e728aaeee3b81071d32683",
-                "typeString": "literal_string \"ShibaNova LPs\""
+                "typeString": "literal_string \"NebulaNova LPs\""
               },
-              "value": "ShibaNova LPs"
+              "value": "NebulaNova LPs"
             },
             "visibility": "public"
           },
@@ -536,9 +536,9 @@
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_d294ef3c623cf1d7c42e045282c091b48b24a45f523d1e643456b70e95377bb5",
-                "typeString": "literal_string \"SHIBA-LP\""
+                "typeString": "literal_string \"Nebula-LP\""
               },
-              "value": "SHIBA-LP"
+              "value": "Nebula-LP"
             },
             "visibility": "public"
           },
@@ -785,7 +785,7 @@
                 "typeIdentifier": "t_rational_49955707469362902507454157297736832118868343942642399513960811609542965143241_by_1",
                 "typeString": "int_const 4995...(69 digits omitted)...3241"
               },
-              "value": "0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9"
+              "value": "0x9575befd1adf594c548618453cdba973cf24bf74bbeb716f9df2c2c6b5c7b818"
             },
             "visibility": "public"
           },
@@ -1377,16 +1377,16 @@
                                   "referencedDeclaration": 2371,
                                   "src": "1382:4:0",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_contract$_ShibaERC20_$384",
-                                    "typeString": "contract ShibaERC20"
+                                    "typeIdentifier": "t_contract$_NebulaERC20_$384",
+                                    "typeString": "contract NebulaERC20"
                                   }
                                 }
                               ],
                               "expression": {
                                 "argumentTypes": [
                                   {
-                                    "typeIdentifier": "t_contract$_ShibaERC20_$384",
-                                    "typeString": "contract ShibaERC20"
+                                    "typeIdentifier": "t_contract$_NebulaERC20_$384",
+                                    "typeString": "contract NebulaERC20"
                                   }
                                 ],
                                 "id": 79,
@@ -4550,9 +4550,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_5685c04a99d48dd7b32313571747a8bb71811edd08f3def536812ff4440b1532",
-                          "typeString": "literal_string \"ShibaNovaSwap: EXPIRED\""
+                          "typeString": "literal_string \"NebulaNovaSwap: EXPIRED\""
                         },
-                        "value": "ShibaNovaSwap: EXPIRED"
+                        "value": "NebulaNovaSwap: EXPIRED"
                       }
                     ],
                     "expression": {
@@ -4563,7 +4563,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_5685c04a99d48dd7b32313571747a8bb71811edd08f3def536812ff4440b1532",
-                          "typeString": "literal_string \"ShibaNovaSwap: EXPIRED\""
+                          "typeString": "literal_string \"NebulaNovaSwap: EXPIRED\""
                         }
                       ],
                       "id": 322,
@@ -5297,9 +5297,9 @@
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_1d93b4a05d1263deab1fc165ce3b17fd9ff90e75e3af71e226c814548af6d399",
-                          "typeString": "literal_string \"ShibaNovaSwap: INVALID_SIGNATURE\""
+                          "typeString": "literal_string \"NebulaNovaSwap: INVALID_SIGNATURE\""
                         },
-                        "value": "ShibaNovaSwap: INVALID_SIGNATURE"
+                        "value": "NebulaNovaSwap: INVALID_SIGNATURE"
                       }
                     ],
                     "expression": {
@@ -5310,7 +5310,7 @@
                         },
                         {
                           "typeIdentifier": "t_stringliteral_1d93b4a05d1263deab1fc165ce3b17fd9ff90e75e3af71e226c814548af6d399",
-                          "typeString": "literal_string \"ShibaNovaSwap: INVALID_SIGNATURE\""
+                          "typeString": "literal_string \"NebulaNovaSwap: INVALID_SIGNATURE\""
                         }
                       ],
                       "id": 363,
@@ -5654,9 +5654,9 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/ShibaERC20.sol",
+      "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/NebulaERC20.sol",
       "exportedSymbols": {
-        "ShibaERC20": [
+        "NebulaERC20": [
           384
         ]
       }
@@ -5678,8 +5678,8 @@
       {
         "attributes": {
           "SourceUnit": 1646,
-          "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/interfaces/IShibaERC20.sol",
-          "file": "./interfaces/IShibaERC20.sol",
+          "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/interfaces/INebulaERC20.sol",
+          "file": "./interfaces/INebulaERC20.sol",
           "scope": 385,
           "symbolAliases": [
             null
@@ -5693,7 +5693,7 @@
       {
         "attributes": {
           "SourceUnit": 2297,
-          "absolutePath": "/D/DeployShiba/ShibaFactory/contracts/libs/SafeMath.sol",
+          "absolutePath": "/D/DeployNebula/NebulaFactory/contracts/libs/SafeMath.sol",
           "file": "./libs/SafeMath.sol",
           "scope": 385,
           "symbolAliases": [
@@ -5717,7 +5717,7 @@
             384,
             1645
           ],
-          "name": "ShibaERC20",
+          "name": "NebulaERC20",
           "scope": 385
         },
         "children": [
@@ -5729,9 +5729,9 @@
               {
                 "attributes": {
                   "contractScope": null,
-                  "name": "IShibaERC20",
+                  "name": "INebulaERC20",
                   "referencedDeclaration": 1645,
-                  "type": "contract IShibaERC20"
+                  "type": "contract INebulaERC20"
                 },
                 "id": 4,
                 "name": "UserDefinedTypeName",
@@ -5799,8 +5799,8 @@
                   "lValueRequested": false,
                   "subdenomination": null,
                   "token": "string",
-                  "type": "literal_string \"ShibaNova LPs\"",
-                  "value": "ShibaNova LPs"
+                  "type": "literal_string \"NebulaNova LPs\"",
+                  "value": "NebulaNova LPs"
                 },
                 "id": 10,
                 "name": "Literal",
@@ -5841,8 +5841,8 @@
                   "lValueRequested": false,
                   "subdenomination": null,
                   "token": "string",
-                  "type": "literal_string \"SHIBA-LP\"",
-                  "value": "SHIBA-LP"
+                  "type": "literal_string \"Nebula-LP\"",
+                  "value": "Nebula-LP"
                 },
                 "id": 13,
                 "name": "Literal",
@@ -6087,7 +6087,7 @@
                   "subdenomination": null,
                   "token": "number",
                   "type": "int_const 4995...(69 digits omitted)...3241",
-                  "value": "0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9"
+                  "value": "0x9575befd1adf594c548618453cdba973cf24bf74bbeb716f9df2c2c6b5c7b818"
                 },
                 "id": 33,
                 "name": "Literal",
@@ -6850,8 +6850,8 @@
                                         "attributes": {
                                           "argumentTypes": [
                                             {
-                                              "typeIdentifier": "t_contract$_ShibaERC20_$384",
-                                              "typeString": "contract ShibaERC20"
+                                              "typeIdentifier": "t_contract$_NebulaERC20_$384",
+                                              "typeString": "contract NebulaERC20"
                                             }
                                           ],
                                           "isConstant": false,
@@ -6872,7 +6872,7 @@
                                             null
                                           ],
                                           "referencedDeclaration": 2371,
-                                          "type": "contract ShibaERC20",
+                                          "type": "contract NebulaERC20",
                                           "value": "this"
                                         },
                                         "id": 80,
@@ -10310,7 +10310,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_5685c04a99d48dd7b32313571747a8bb71811edd08f3def536812ff4440b1532",
-                                  "typeString": "literal_string \"ShibaNovaSwap: EXPIRED\""
+                                  "typeString": "literal_string \"NebulaNovaSwap: EXPIRED\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -10400,8 +10400,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaNovaSwap: EXPIRED\"",
-                              "value": "ShibaNovaSwap: EXPIRED"
+                              "type": "literal_string \"NebulaNovaSwap: EXPIRED\"",
+                              "value": "NebulaNovaSwap: EXPIRED"
                             },
                             "id": 327,
                             "name": "Literal",
@@ -11006,7 +11006,7 @@
                                 },
                                 {
                                   "typeIdentifier": "t_stringliteral_1d93b4a05d1263deab1fc165ce3b17fd9ff90e75e3af71e226c814548af6d399",
-                                  "typeString": "literal_string \"ShibaNovaSwap: INVALID_SIGNATURE\""
+                                  "typeString": "literal_string \"NebulaNovaSwap: INVALID_SIGNATURE\""
                                 }
                               ],
                               "overloadedDeclarations": [
@@ -11189,8 +11189,8 @@
                               "lValueRequested": false,
                               "subdenomination": null,
                               "token": "string",
-                              "type": "literal_string \"ShibaNovaSwap: INVALID_SIGNATURE\"",
-                              "value": "ShibaNovaSwap: INVALID_SIGNATURE"
+                              "type": "literal_string \"NebulaNovaSwap: INVALID_SIGNATURE\"",
+                              "value": "NebulaNovaSwap: INVALID_SIGNATURE"
                             },
                             "id": 373,
                             "name": "Literal",

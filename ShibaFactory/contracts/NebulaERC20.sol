@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity =0.5.16;
 
-import './interfaces/IShibaERC20.sol';
+import './interfaces/INebulaERC20.sol';
 import './libs/SafeMath.sol';
 
-contract ShibaERC20 is IShibaERC20 {
+contract NebulaERC20 is INebulaERC20 {
     using SafeMath for uint;
 
-    string public constant name = 'ShibaNova LPs';
-    string public constant symbol = 'SHIBA-LP';
+    string public constant name = 'NebulaNova LPs';
+    string public constant symbol = 'Nebula-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;
@@ -16,7 +16,7 @@ contract ShibaERC20 is IShibaERC20 {
 
     bytes32 public DOMAIN_SEPARATOR;
     // keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)");
-    bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
+    bytes32 public constant PERMIT_TYPEHASH = 0x9575befd1adf594c548618453cdba973cf24bf74bbeb716f9df2c2c6b5c7b818;
     mapping(address => uint) public nonces;
 
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -80,7 +80,7 @@ contract ShibaERC20 is IShibaERC20 {
     }
 
     function permit(address owner, address spender, uint value, uint deadline, uint8 v, bytes32 r, bytes32 s) external {
-        require(deadline >= block.timestamp, 'ShibaNovaSwap: EXPIRED');
+        require(deadline >= block.timestamp, 'NebulaNovaSwap: EXPIRED');
         bytes32 digest = keccak256(
             abi.encodePacked(
                 '\x19\x01',
@@ -89,7 +89,7 @@ contract ShibaERC20 is IShibaERC20 {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        require(recoveredAddress != address(0) && recoveredAddress == owner, 'ShibaNovaSwap: INVALID_SIGNATURE');
+        require(recoveredAddress != address(0) && recoveredAddress == owner, 'NebulaNovaSwap: INVALID_SIGNATURE');
         _approve(owner, spender, value);
     }
 }

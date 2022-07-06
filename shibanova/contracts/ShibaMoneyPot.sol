@@ -10,7 +10,7 @@ import "./interfaces/IMoneyPot.sol";
 /*
 * This contract is used to collect sNova stacking dividends from fee (like swap, deposit on pools or farms)
 */
-contract ShibaMoneyPot is Ownable, IMoneyPot {
+contract NebulaMoneyPot is Ownable, IMoneyPot {
     using SafeBEP20 for IBEP20;
     using SafeMath for uint256;
 
@@ -56,12 +56,12 @@ contract ShibaMoneyPot is Ownable, IMoneyPot {
 
     uint256 public lastSNovaSupply; // Cache the last totalSupply of sNova
 
-    constructor (IBEP20 _sNova, address _feeManager, address _masterShiba, uint256 _startBlock, uint256 _initialUpdateMoneyPotPeriodNbBlocks) public{
+    constructor (IBEP20 _sNova, address _feeManager, address _masterNebula, uint256 _startBlock, uint256 _initialUpdateMoneyPotPeriodNbBlocks) public{
         updateMoneyPotPeriodNbBlocks = _initialUpdateMoneyPotPeriodNbBlocks;
         startBlock = _startBlock;
         lastUpdateMoneyPotBlocks = _startBlock;
         sNova = _sNova;
-        addressWithoutReward[_masterShiba] = true;
+        addressWithoutReward[_masterNebula] = true;
         feeManager = _feeManager;
     }
 
